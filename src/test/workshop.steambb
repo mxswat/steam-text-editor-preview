@@ -1,0 +1,78 @@
+[h1]Waymakers[/h1]
+[quote]"No settlement should stand alone."[/quote]
+
+[b]Roads, railways, and commerce bind isolated peoples together.[/b] Waymakers is a new Ideology meme for builders, traders, and explorers: colonists who believe civilization advances only when people, goods, and ideas are free to move.
+
+[img]https://i.imgur.com/REPLACE_meme_icon.jpg[/img]
+
+[hr][/hr]
+
+[h2]🛣️ Core Identity[/h2]
+[list]
+[*][b]Infrastructure Required.[/b] Your colony takes a mood hit if it goes 30 days without building a road or railway (new colonies get a grace period). Stay connected, or stay miserable.
+[*][b]Road completion is a celebration.[/b] Finishing a road or railway grants a scaling mood buff (+2 to +30) based on quality tier and length. Better roads, longer roads, bigger payoff.
+[*]Incompatible with [b]Isolationist[/b] and [b]Raider[/b]. This is a philosophy of connection, not walls or banditry.
+[/list]
+
+[img]https://i.imgur.com/REPLACE_mood_tooltip.jpg[/img]
+
+[h2]👷 Surveyor Specialist Role[/h2]
+A new Ideology role for your master builders.
+[list]
+[*]+50% Construction speed, +20% Mining speed (passive)
+[*][b]Coordinate Works[/b] ability. Buffs nearby colonists' construction speed by +75% in a huge radius for 24 hours.
+[*]Cast before a caravan departs to boost road building work speed by 75% on the road building job itself.
+[/list]
+
+[img]https://i.imgur.com/REPLACE_surveyor_ability.jpg[/img]
+
+[h2]🎉 Two New Rituals[/h2]
+[list]
+[*][b]Groundbreaking Ceremony.[/b] Kick off a major project with the community behind you.
+[*][b]Opening of the Line.[/b] Celebrate a finished road or railway with full pomp and circumstance.
+[/list]
+Both are led by the Surveyor, fully optional, and scale in quality with participant count and skill.
+
+[img]https://i.imgur.com/REPLACE_ritual.jpg[/img]
+
+[h2]🧩 Compatibility[/h2]
+[table noborder=1]
+[tr]
+[th]Requirement[/th]
+[th]Status[/th]
+[/tr]
+[tr]
+[td]Harmony[/td]
+[td]Required[/td]
+[/tr]
+[tr]
+[td]Ideology DLC[/td]
+[td]Required[/td]
+[/tr]
+[tr]
+[td]Roads of the Rim[/td]
+[td]Required[/td]
+[/tr]
+[tr]
+[td]RimWorld Version[/td]
+[td]1.6[/td]
+[/tr]
+[/table]
+
+No Hugslib dependency. No custom Defs that override vanilla memes.
+
+[hr][/hr]
+
+[h2]💡 Design Philosophy[/h2]
+Waymakers don't care about conquest or isolation. They get their joy from movement, commerce, and cooperation, and they get uneasy when the colony goes quiet and the roads go untouched. To them, a civilization isn't defined by its walls, but by the roads that connect it to everyone else.
+
+[h2]🐛 Known Limitations[/h2]
+[list]
+[*]"Isolated Settlement" mood thought is planned but not yet implemented.
+[*]Road destruction has no clean hook in RotR yet, so the "Route Destroyed" thought is back burnered.
+[/list]
+
+[h2]❤️ Support[/h2]
+Found a bug or have a suggestion? Drop it in the comments or the Discussions tab. This mod is actively maintained.
+
+[quote]Subscribe and start paving the way.[/quote]

@@ -1,0 +1,89 @@
+{
+  "name": "Steam BBCode",
+  "scopeName": "text.steambb",
+  "fileTypes": ["steambb", "bbcode"],
+  "patterns": [
+    {
+      "name": "meta.tag.bbcode",
+      "begin": "\\[(/?)(\\w+)(=([^\\]]*))?\\]",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.bbcode" },
+        "2": { "name": "entity.name.tag.bbcode" },
+        "3": { "name": "string.bbcode" },
+        "4": { "name": "string.bbcode" }
+      },
+      "end": "(?=\\[/?\\w+\\])|$",
+      "patterns": [
+        {
+          "include": "#inline"
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.single.bbcode",
+      "begin": "'",
+      "end": "'"
+    },
+    {
+      "name": "string.quoted.double.bbcode",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "entity.name.tag.bbcode",
+      "match": "\\[\\/?\\w+\\]"
+    }
+  ],
+  "repository": {
+    "inline": {
+      "patterns": [
+        { "include": "#tags" }
+      ]
+    },
+    "tags": {
+      "patterns": [
+        {
+          "name": "meta.tag.block.bbcode",
+          "begin": "\\[(b|i|u|s|strike|center|left|right|code|spoiler|noparse)\\]",
+          "beginCaptures": {
+            "0": { "name": "entity.name.tag.bbcode" }
+          },
+          "end": "\\[\\/\\1\\]",
+          "endCaptures": {
+            "0": { "name": "entity.name.tag.bbcode" }
+          },
+          "patterns": [{ "include": "#inline" }]
+        },
+        {
+          "name": "meta.tag.block.bbcode",
+          "begin": "\\[(h[1-3])\\]",
+          "beginCaptures": {
+            "0": { "name": "entity.name.tag.bbcode" }
+          },
+          "end": "\\[\\/\\1\\]",
+          "endCaptures": {
+            "0": { "name": "entity.name.tag.bbcode" }
+          },
+          "patterns": [{ "include": "#inline" }]
+        },
+        {
+          "name": "meta.tag.block.bbcode",
+          "begin": "\\[(url|img|quote|size|color|list|olist|table|tr|th|td|hr)(?:\\s+\\w+=[^\\]]*)?\\]",
+          "beginCaptures": {
+            "0": { "name": "entity.name.tag.bbcode" }
+          },
+          "end": "\\[\\/\\1\\]",
+          "endCaptures": {
+            "0": { "name": "entity.name.tag.bbcode" }
+          },
+          "patterns": [{ "include": "#inline" }]
+        },
+        {
+          "name": "keyword.control.bbcode",
+          "match": "\\[\\*\\]"
+        }
+      ]
+    }
+  },
+  "uuid": "a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d"
+}

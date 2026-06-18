@@ -1,0 +1,83 @@
+{
+  "name": "steam-text-editor-preview",
+  "displayName": "Steam Text Editor Preview",
+  "description": "Preview Steam BBCode (Steam Text Editor format) with a live preview panel",
+  "version": "0.1.0",
+  "publisher": "your-publisher-name",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "steambb",
+        "aliases": [
+          "Steam BBCode",
+          "Steam Text Editor",
+          "steambb"
+        ],
+        "extensions": [
+          ".steambb",
+          ".bbcode"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "steambb",
+        "scopeName": "text.steambb",
+        "path": "./syntaxes/bbcode.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "steambb.preview",
+        "title": "Open Preview to the Side",
+        "icon": "$(preview)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "steambb.preview",
+        "key": "ctrl+shift+v",
+        "when": "editorLangId == steambb"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "steambb.preview",
+          "group": "navigation",
+          "when": "editorLangId == steambb"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.84.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/test-electron": "^3.0.0",
+    "eslint": "^8.50.0",
+    "typescript": "^5.3.0"
+  }
+}
