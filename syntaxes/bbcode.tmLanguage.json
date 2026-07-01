@@ -4,30 +4,7 @@
   "fileTypes": ["steambb", "bbcode"],
   "patterns": [
     {
-      "name": "meta.tag.bbcode",
-      "begin": "\\[(/?)(\\w+)(=([^\\]]*))?\\]",
-      "beginCaptures": {
-        "1": { "name": "punctuation.definition.tag.begin.bbcode" },
-        "2": { "name": "entity.name.tag.bbcode" },
-        "3": { "name": "string.bbcode" },
-        "4": { "name": "string.bbcode" }
-      },
-      "end": "(?=\\[/?\\w+\\])|$",
-      "patterns": [
-        {
-          "include": "#inline"
-        }
-      ]
-    },
-    {
-      "name": "string.quoted.single.bbcode",
-      "begin": "'",
-      "end": "'"
-    },
-    {
-      "name": "string.quoted.double.bbcode",
-      "begin": "\"",
-      "end": "\""
+      "include": "#tags"
     },
     {
       "name": "entity.name.tag.bbcode",
